@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songo Jeu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <span class="heading" id="songo_head">Songo</span>
+    <div class="game_container" id="">
+        <div class="main_box_container" id="">
+            <div class="playing_part" id="">
+                <div id="message_box1" class="message"></div>
+                <div class="player" id="player1">-</div>
+                <div class="main_box" id="">
+                    <div class="rows" id="upper_row">
+                        <div class="play_box" id="box1">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="1" >A1</div>
+                        </div>
+                        <div class="play_box" id="box2">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="2" >A2</div>
+                        </div>
+                        <div class="play_box" id="box3">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="3">A3</div>
+                        </div>
+                        <div class="play_box" id="box4">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="4" >A4</div>
+                        </div>
+                        <div class="play_box" id="box5">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="5" >A5</div>
+                        </div>
+                        <div class="play_box" id="box6">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="6">A6</div>
+                        </div>
+                        <div class="play_box" id="box7">
+                            <div class="score" id=""></div>
+                            <div class="piece_cont" id="7" >A7</div>
+                    </div>
+                    </div>
+                    <div class="rows" id="middle_row">
+                        <div class="play_box" id="box8">
+                            <!-- <div class="total" id="total1">0</div> -->
+                            <div class="piece_cont" id="b8" style="color : black"></div>
+                        </div>
+                        <div class="play_box" id="box9">
+                            <!-- <div class="score" id="">-</div> -->
+                            <div class="piece_cont" id="empty_box" style="background : white"></div>
+                        </div>
+                        <div class="play_box" id="box10">
+                            <div class="piece_cont" id="a8" style="color : black"></div>
+                            <!-- <div class="total" id="total2">0</div> -->
+                        </div>
+                    </div>
+                    <div class="rows" id="lower_row">
+                        <div class="play_box" id="box11">
+                            <div class="piece_cont" id="8" onclick="game_flow(id)">B1</div>
+                            <div class="score" id=""></div>
+                        </div>
+                        <div class="play_box" id="box12">
+                            <div class="piece_cont" id="9" onclick="game_flow(id)">B2</div>
+                            <div class="score" id=""></div>
+                        </div>
+                        <div class="play_box" id="box13">
+                            <div class="piece_cont" id="10" onclick="game_flow(id)">B3</div>
+                            <div class="score" id=""></div>
+                        </div>
+                        <div class="play_box" id="box14">
+                            <div class="piece_cont" id="11" onclick="game_flow(id)">B4</div>
+                            <div class="score" id=""></div>
+                        </div>
+                        <div class="play_box" id="box15">
+                            <div class="piece_cont" id="12" onclick="game_flow(id)">B5</div>
+                            <div class="score" id=""></div>
+                        </div>
+                        <div class="play_box" id="box16">
+                            <div class="piece_cont" id="13" onclick="game_flow(id)">B6</div>
+                            <div class="score" id=""></div>
+                        </div>
+                        <div class="play_box" id="box17">
+                            <div class="piece_cont" id="14" onclick="game_flow(id)">B7</div>
+                            <div class="score" id=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player" id="player2">-</div>
+                <div id="message_box2" class="message"></div>
+            </div>
+        </div>
+        <div class="menu_part" id="">
+            <input type="button" value="Reset" class="menu_button" id="" onclick="init()">
+            <input type="button" value="Stop" class="menu_button" id="" onclick="stop()">
+            <input type="button" value="Pause" class="menu_button" id="" onclick="">
+            <input type="button" value="Settings" class="menu_button" id="" onclick="change_level()">
+        </div>
+    </div>
+</body>
+
+</html>

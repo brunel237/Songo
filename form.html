@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="script.js"></script>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="container" id="">
+        <form action="" method="POST" >
+            <div class="info_container" id="name">
+                <legend>Name : </legend>
+                <input type="text" name="names" id="names">
+            </div>
+            <div class="info_container" id="gender">
+                <legend>Gender : </legend>
+                <div class="gender_div">
+                    <span>Male </span><input type="radio" name="gender" value="male" id="gender">
+                    <span>Female </span><input type="radio" name="gender" value="female" id="gender">
+                </div>
+            </div>
+            <div class="info_container" id="email">
+                <legend>Email : </legend>
+                <input type="email" name="email" id="mail">
+            </div><hr>
+            <button type="button" id="submit" onclick="enrol()">Submit</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    function enrol() {
+        var name = $('input[name=names]').val();
+        var gender = $('input[name=gender]').val();
+        var email = $('input[name=email]').val();
+        var formData = {name: name, gender: gender, email: email};
+        $.ajax({
+            url: "http://localhost/songoj/test2.php",
+            type: "POST",
+            data: formData,
+            success: function(response) {
+
+            }
+        });
+    }
+</script>
+</html>
